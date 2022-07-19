@@ -1,0 +1,14 @@
+{% extends 'CRUD/base.html' %}
+
+{% block title %}Delete{% endblock %}
+
+{% block content %}
+
+<h2>Delete</h2>
+
+<p><strong>Do you really want to delete the contact?</strong></p>
+
+<ul><li>{{contact.name}}<br>{{contact.phone}}</li></ul>
+
+<p><a href="{% url 'crud:delete' contact.id %}">Delete</a> | <a href="{% url 'crud:read' %}">Cancel</a></p>
+{% endblock %}

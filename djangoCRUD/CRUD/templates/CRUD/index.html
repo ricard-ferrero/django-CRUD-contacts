@@ -1,0 +1,25 @@
+{% extends 'CRUD/base.html' %}
+
+{% block title %}Read{% endblock %}
+
+{% block content %}
+<h2>Read</h2>
+<a href="{% url 'crud:new' %}">New contact</a>
+{% if contact_list %}
+<ul>
+	{% for contact in contact_list %}
+	<li>
+		<strong>{{contact.name}}</strong>
+		<br>
+		{{contact.phone}}
+		<br>
+		<a href="{% url 'crud:edit' contact.id %}">Edit</a> | <a href="{% url 'crud:remove' contact.id %}">Remove</a>
+	</li>
+	{% endfor %}
+</ul>
+{% else %}
+<p><strong>The contact list is empty.</strong></p>
+<p>Please, click "New contact" to add a contact to the list.</p>
+{% endif %}
+
+{% endblock %}

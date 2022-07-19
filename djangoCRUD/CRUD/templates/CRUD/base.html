@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>{% block title %}{% endblock %}</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'CRUD/css/style.css' %}">
+</head>
+<body>
+	<header>
+		<h1>CONTACT BOOK</h1>
+		<p><em>An easy CRUD in Django 4.0</em></p>
+	</header>
+
+	<main>
+		{% block content %}{% endblock %}	
+	</main>
+
+	<footer>
+		<div>
+		<p>Ricard Ferrero
+			<ul>
+				<li><a href="https://github.com/ricard-ferrero" >github.com/ricard-ferrero</a></li>
+				<li><a href="https://www.linkedin.com/in/ricard-ferrero-003b9b232/">Linkedin - Ricard Ferrero</a></li>
+			</ul>
+		</p>
+		</div>
+		<div>
+		<p>Resources
+			<ul>
+				<li><a href="https://palettes.shecodes.io/palettes/1548#palette">CSS Color Palette - SheCodes.io</a></li>
+			</ul>
+		</p>
+		</div>
+	</footer>
+</body>
+</html>
