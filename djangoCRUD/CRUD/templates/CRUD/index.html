@@ -5,7 +5,7 @@
 {% block content %}
 <h2>Read</h2>
 <a href="{% url 'crud:new' %}">New contact</a>
-{% if contact_list %}
+{% if contact_list > 0 %}
 <ul>
 	{% for contact in contact_list %}
 	<li>
